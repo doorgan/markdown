@@ -1,6 +1,6 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 
-export const mention: Definition = {
+export const mention: InlineDefinition = {
   token: "mention",
   terminal: true,
   test: (input, index) => {

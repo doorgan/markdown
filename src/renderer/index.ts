@@ -1,11 +1,12 @@
 import html_renderers from "./renderers/html";
 import { Node, Ast } from "../types";
+import { Options } from "../main";
 
-export type Renderer = (ast: Ast, next?: (ast: Ast) => string) => string;
+export type Renderer = (node: Node, next?: (ast: Ast) => string) => string;
 export type Renderers = { [type: string]: Renderer };
 
-export const render = (ast: Ast, renderers?: Renderers): string => {
-  if (!renderers) renderers = html_renderers;
+export const render = (ast: Ast, options: Options = {}): string => {
+  const renderers = (options.renderers) ? options.renderers : html_renderers;
   const do_render = build_renderer(renderers)
   return do_render(ast);
 }

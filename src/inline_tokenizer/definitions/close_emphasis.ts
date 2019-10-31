@@ -1,6 +1,6 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 
-export const close_emphasis: Definition = {
+export const close_emphasis: InlineDefinition = {
   token: "close_emphasis",
   terminal: false,
   to_eat: 1,

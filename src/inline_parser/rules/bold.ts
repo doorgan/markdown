@@ -1,5 +1,5 @@
-import { Rule } from "../rules";
-export const bold: Rule = {
+import { InlineRule } from "../rules";
+export const bold: InlineRule = {
   node: "bold",
   recursive: true,
   test: token => {

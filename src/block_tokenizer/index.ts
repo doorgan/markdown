@@ -1,20 +1,20 @@
-import block_definitions from "./definitions";
+import default_definitions from "./definitions";
 import { BlockDefinition } from "./definitions";
 import { BlockToken } from "../types";
 
-interface TokenizerOpts {
-  definitions?: BlockDefinition[]
-}
+import { Options } from "../main";
 
-export const tokenize = (input: string, opts?: TokenizerOpts): BlockToken[] => {
-  const options = {
-    definitions: (opts) ? opts.definitions : block_definitions
-  }
+
+export const tokenize = (input: string, options?: Options): BlockToken[] => {
   const lines = input.split(/\r\n?|\n/);
+  if (!options) options = {};
+  if (!options.block_definitions) {
+    options.block_definitions = default_definitions;
+  }
   return do_tokenize(lines, options);
 };
 
-const do_tokenize = (lines: string[], options: TokenizerOpts, tokens: BlockToken[] = [], text: string[] = []): BlockToken[] => {
+const do_tokenize = (lines: string[], options: Options = {}, tokens: BlockToken[] = [], text: string[] = []): BlockToken[] => {
   if (!lines.length) {
     if (text.length) {
       let value = text.join("\n");
@@ -30,7 +30,7 @@ const do_tokenize = (lines: string[], options: TokenizerOpts, tokens: BlockToken
     return tokens;
   }
   let [current, ...rest] = lines;
-  const block_def = block_definitions.find(x => x.pattern.test(current));
+  const block_def = options.block_definitions!.find(x => x.pattern.test(current));
   if (!block_def) {
     text.push(current);
     return do_tokenize(rest, options, tokens, text);

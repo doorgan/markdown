@@ -1,6 +1,6 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 
-export const strikethrough: Definition = {
+export const strikethrough: InlineDefinition = {
   token: "strikethrough",
   terminal: false,
   test: (input, index) => {

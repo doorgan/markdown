@@ -1,7 +1,7 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 import { no_punctuation_re } from "../../utils";
 
-export const open_emphasis: Definition = {
+export const open_emphasis: InlineDefinition = {
   token: "open_emphasis",
   terminal: false,
   to_eat: 1,

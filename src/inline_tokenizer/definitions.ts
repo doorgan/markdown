@@ -11,7 +11,7 @@ import { mention } from "./definitions/mention";
 import { post_ref } from "./definitions/post_ref";
 import { strikethrough } from "./definitions/strikethrough";
 
-export interface Definition {
+export interface InlineDefinition {
   token: string,
   terminal: boolean,
   get_value?: (input: string, index: number) => string,
@@ -20,7 +20,7 @@ export interface Definition {
   tokenize?: (input: string, index: number) => InlineToken
 }
 
-const definitions: Definition[] = [
+const definitions: InlineDefinition[] = [
   open_bold,
   close_bold,
   open_emphasis,

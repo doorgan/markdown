@@ -1,5 +1,5 @@
-import { Rule } from "../rules";
-export const emphasis: Rule = {
+import { InlineRule } from "../rules";
+export const emphasis: InlineRule = {
   node: "emphasis",
   recursive: true,
   test: token => {

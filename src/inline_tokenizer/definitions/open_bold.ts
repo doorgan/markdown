@@ -1,7 +1,7 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 import { no_punctuation_re } from "../../utils";
 
-export const open_bold: Definition = {
+export const open_bold: InlineDefinition = {
   token: "open_bold",
   terminal: false,
   test: (input, index) => {

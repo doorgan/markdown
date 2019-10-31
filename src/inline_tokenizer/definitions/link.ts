@@ -1,7 +1,7 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 import { is_url } from "../../utils";
 
-export const link: Definition = {
+export const link: InlineDefinition = {
   token: "link",
   terminal: true,
   test: (input, index) => {

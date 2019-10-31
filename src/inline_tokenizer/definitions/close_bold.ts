@@ -1,6 +1,6 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 
-export const close_bold: Definition = {
+export const close_bold: InlineDefinition = {
   token: "close_bold",
   terminal: false,
   test: (input, index) => {

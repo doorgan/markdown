@@ -1,7 +1,7 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 import { no_punctuation_re } from "../../utils";
 
-export const post_ref: Definition = {
+export const post_ref: InlineDefinition = {
   token: "post_ref",
   terminal: true,
   test: (input, index) => {

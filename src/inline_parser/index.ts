@@ -1,6 +1,6 @@
 import inline_rules from "./rules";
 import { Node, InlineToken as Token } from "../types";
-import { Rule } from "./rules";
+import { InlineRule } from "./rules";
 
 export type Ast = Node[]
 
@@ -38,7 +38,7 @@ const do_parse = (tokens: Token[], ast: Node[] = []): Ast => {
   return do_parse(rest, ast);
 };
 
-const process = (rule: Rule, current: Token, content: any) => {
+const process = (rule: InlineRule, current: Token, content: any) => {
   if (rule.process) return rule.process(current, content, do_parse);
   let data = {};
   if (rule.recursive) {

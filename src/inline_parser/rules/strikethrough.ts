@@ -1,5 +1,5 @@
-import { Rule } from "../rules";
-export const strikethrough: Rule = {
+import { InlineRule } from "../rules";
+export const strikethrough: InlineRule = {
   node: "strikethrough",
   recursive: true,
   test: token => {

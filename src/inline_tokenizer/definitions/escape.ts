@@ -1,6 +1,6 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 
-export const escape: Definition = {
+export const escape: InlineDefinition = {
   token: "escape",
   terminal: true,
   test: (input, index) => {

@@ -1,7 +1,7 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 import { InlineToken } from "../../types";
 
-export const inline_code: Definition = {
+export const inline_code: InlineDefinition = {
   token: "inline_code",
   terminal: true,
   test: (input, index) => {

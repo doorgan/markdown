@@ -1,6 +1,6 @@
-import { Definition } from "../definitions";
+import { InlineDefinition } from "../definitions";
 
-export const hashtag: Definition = {
+export const hashtag: InlineDefinition = {
   token: "hashtag",
   terminal: true,
   test: (input, index) => {

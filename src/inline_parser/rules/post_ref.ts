@@ -1,5 +1,5 @@
-import { Rule } from "../rules";
-export const post_ref: Rule = {
+import { InlineRule } from "../rules";
+export const post_ref: InlineRule = {
   node: "post_ref",
   terminal: true,
   test: token => {

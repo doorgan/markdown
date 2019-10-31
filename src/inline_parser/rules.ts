@@ -8,7 +8,7 @@ import { hashtag } from "./rules/hashtag";
 import { post_ref } from "./rules/post_ref";
 import { link } from "./rules/link";
 
-export interface Rule {
+export interface InlineRule {
   node: string,
   terminal?: boolean,
   recursive?: boolean,
@@ -17,7 +17,7 @@ export interface Rule {
   process?: (token: InlineToken, content: string, next: Function) => Node
 }
 
-let rules: Rule[] = [
+let rules: InlineRule[] = [
   inline_code,
   bold,
   emphasis,

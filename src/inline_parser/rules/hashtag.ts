@@ -1,5 +1,5 @@
-import { Rule } from "../rules";
-export const hashtag: Rule = {
+import { InlineRule } from "../rules";
+export const hashtag: InlineRule = {
   node: "hashtag",
   terminal: true,
   test: token => {

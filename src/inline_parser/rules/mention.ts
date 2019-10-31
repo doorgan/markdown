@@ -1,5 +1,5 @@
-import { Rule } from "../rules";
-export const mention: Rule = {
+import { InlineRule } from "../rules";
+export const mention: InlineRule = {
   node: "mention",
   terminal: true,
   test: token => {
